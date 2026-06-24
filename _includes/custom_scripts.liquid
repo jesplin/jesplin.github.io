@@ -1,10 +1,12 @@
 <script>
-function toggleAbstract(btn) {
-  var entry = btn.closest('.col-sm-10, [id]');
-  var abstractDiv = entry.querySelector('.abstract:not(.btn)');
-  if (!abstractDiv) return;
-  var isHidden = abstractDiv.classList.contains('hidden');
-  abstractDiv.classList.toggle('hidden', !isHidden);
-  btn.classList.toggle('abstract-active', isHidden);
+if (typeof toggleAbstract === 'undefined') {
+  function toggleAbstract(btn) {
+    var entry = btn.closest('.col-sm-10, [id]');
+    var abstractDiv = entry.querySelector('.abstract:not(.btn)');
+    if (!abstractDiv) return;
+    var isHidden = abstractDiv.classList.contains('hidden');
+    abstractDiv.classList.toggle('hidden', !isHidden);
+    btn.classList.toggle('abstract-active', isHidden);
+  }
 }
 </script>
